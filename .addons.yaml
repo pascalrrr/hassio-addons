@@ -2,10 +2,10 @@
 channel: stable
 addons:
   mochad:
-    repository: floridaman7588/mochad-ha-addon
+    repository: pascalrrr/mochad-ha-addon
     target: mochad
-    image: ghcr.io/floridaman7588/mochad/{arch}
-  silabs-cfw:
-    repository: floridaman7588/silabs-cfw-ha-addon
-    target: silabs-cfw
-    image: ghcr.io/floridaman7588/silabs-cfw/{arch}
+    image: ghcr.io/pascalrrr/mochad/{arch}
+  hyperion:
+    repository: pascalrrr/hyperion-ha-addon
+    target: hyperion
+    image: ghcr.io/pascalrrr/hyperion/{arch}

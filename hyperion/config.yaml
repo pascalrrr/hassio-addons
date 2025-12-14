@@ -1,0 +1,44 @@
+---
+name: Hyperion (Next Generation)
+description: >-
+  A Home Assistant Addon for Hyperion, an
+  Open Source Bias/Ambient Lighting Solution
+version: 2.1.1
+image: ghcr.io/pascalrrr/hyperion/{arch}
+slug: hyperion
+init: false
+arch:
+  - aarch64
+  - amd64
+privileged:
+  - SYS_RAWIO
+map:
+  - type: ssl
+    read_only: false
+
+# https://developers.home-assistant.io/docs/add-ons/configuration
+hassio_api: true
+discovery:
+  - hyperion
+panel_icon: mdi:television
+panel_title: Hyperion
+ingress: true
+ingress_port: 8090
+video: true
+audio: true
+udev: true
+gpio: true
+ports:
+  8091/tcp: null
+  8092/tcp: null
+  19333/tcp: 19333
+  19400/tcp: 19400
+  19444/tcp: null
+  19445/tcp: 19445
+ports_description:
+  8091/tcp: Default Web UI
+  8092/tcp: Web UI with SSL
+  19333/tcp: Boblight Server
+  19400/tcp: Flatbuffer Client
+  19444/tcp: JSON-RPC Control Server
+  19445/tcp: Protobuf Server

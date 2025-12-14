@@ -1,24 +1,27 @@
-# Build settings
-name: "mochad"
-description: "Enables X-10 ActiveHome and PowerHouse devices for use in Home Assistant"
-url: "https://fm7588.me/mochad"
+---
+name: Mochad
+description: >-
+  Control X-10 ActiveHome and PowerHouse devices
+  in Home Assistant
+version: 0.0.2
+image: ghcr.io/pascalrrr/mochad/{arch}
+slug: mochad
+init: false
+url: https://pascalrr.gay/redirect/mochad-github
 arch: 
   - amd64
   - aarch64
   - i386
   - armv7
 
-# Addon Configuration
-version: "0.0.2"
-slug: mochad
+# https://developers.home-assistant.io/docs/add-ons/configuration
 uart: true
 usb: true
-init: false
 startup: services
 ports:
-  1099/tcp: 1099
+  1099/tcp: null
 ports_description:
-  1099/tcp: "Mochad TCP gateway"
+  1099/tcp: Mochad TCP gateway
 options:
   serial: {}
 schema:
@@ -27,4 +30,3 @@ schema:
     adapter: match(CM15A|CM15Pro|CM19A)?
     baudrate: int?
     rtscts: bool?
-image: ghcr.io/floridaman7588/mochad/{arch}
