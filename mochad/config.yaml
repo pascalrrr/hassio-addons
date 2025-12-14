@@ -8,7 +8,7 @@ image: ghcr.io/pascalrrr/mochad/{arch}
 slug: mochad
 init: false
 url: https://pascalrr.gay/redirect/mochad-github
-arch: 
+arch:
   - amd64
   - aarch64
   - i386
