@@ -11,8 +11,6 @@ url: https://pascalrr.gay/redirect/mochad-github
 arch:
   - amd64
   - aarch64
-  - i386
-  - armv7
 
 # https://developers.home-assistant.io/docs/add-ons/configuration
 uart: true
@@ -22,11 +20,3 @@ ports:
   1099/tcp: null
 ports_description:
   1099/tcp: Mochad TCP gateway
-options:
-  serial: {}
-schema:
-  serial:
-    port: str?
-    adapter: match(CM15A|CM15Pro|CM19A)?
-    baudrate: int?
-    rtscts: bool?
