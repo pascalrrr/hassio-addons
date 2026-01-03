@@ -3,7 +3,7 @@ name: Mochad
 description: >-
   Control X-10 ActiveHome and PowerHouse devices
   in Home Assistant
-version: 0.0.2
+version: 0.0.3
 image: ghcr.io/pascalrrr/mochad/{arch}
 slug: mochad
 init: false
